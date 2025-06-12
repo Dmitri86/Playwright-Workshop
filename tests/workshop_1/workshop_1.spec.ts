@@ -17,7 +17,7 @@ test.skip('Interacting with Element on Gitlab', async({page}) => {
     await page.waitForTimeout(3000);
 })
 
-test.only('Using Various Locator Methods', async ({page}) => {
+test.skip('Using Various Locator Methods', async ({page}) => {
     await page.goto('https://gitlab.com');
     // await page.getByRole('link', {name: 'Sign In'}).click();
     await page.click(':has-text("Sign in")');
