@@ -27,7 +27,7 @@ test.skip('Automation Form Submission', async({page}) => {
     await expect(secondTodo).not.toHaveClass('completed');
 });
 
-test.only('Hadling Form', async ({page}) => {
+test.skip('Hadling Form', async ({page}) => {
     await page.goto('https://demo.playwright.dev/todomvc');
     const placeholder = '[placeholder="What needs to be done?"]';
     await page.fill(placeholder, 'learn playwright');
