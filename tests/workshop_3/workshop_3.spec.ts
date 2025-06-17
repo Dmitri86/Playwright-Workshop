@@ -26,7 +26,7 @@ test.skip('Drag and Drop', async ({ page }) => {
     await page.waitForTimeout(3000);
 });
 
-test.only('Handling iframe', async ({ page }) => {
+test.skip('Handling iframe', async ({ page }) => {
     await page.goto('file://C:/Learning/Type%20Script/Typescript%20for%20Test%20Automation%20course/tests/workshop_3/index.html');
     const iframe = page.frame({ name: 'iframeName' });
     const inputSelector = '#iframe-input';
