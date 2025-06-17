@@ -25,7 +25,7 @@ test.skip('Confirm Alert', async({page}) => {
     expect(alertMessage).toBe('You clicked Cancel.')
 });
 
-test.only('handling POP-UPs', async({page}) => {
+test.skip('handling POP-UPs', async({page}) => {
     await page.goto('file://C:/Learning/Type%20Script/Typescript%20for%20Test%20Automation%20course/tests/workshop_4/index.html');
     const [popup] = await Promise.all([
         page.waitForEvent('popup'),
