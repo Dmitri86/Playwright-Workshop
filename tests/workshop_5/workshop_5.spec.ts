@@ -23,7 +23,7 @@ test.skip('Add Cookie', async ({ page }) => {
     await page.waitForTimeout(3000);
 });
 
-test.only('Delete Cookies', async ({ page }) => {
+test.skip('Delete Cookies', async ({ page }) => {
     await page.goto('file://C:/Learning/Type%20Script/Playwright%20Shpak/tests/workshop_5/index.html');
      await page.click('#setCookie');
     const cookies = await page.context().cookies('file://C:/Learning/Type%20Script/Playwright%20Shpak/tests/workshop_5/index.html');
