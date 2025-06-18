@@ -12,7 +12,7 @@ test.describe('User Registration Tests', () => {
     test.beforeEach(async ({ page }) => {
         await page.goto('file://C:/Learning/Type%20Script/Playwright%20Shpak/tests/workshop_6/index.html');
     })
-    test.only('Register with valid date', async ({ page }) => {
+    test.skip('Register with valid date', async ({ page }) => {
         await page.fill('#firstName', testDate.firstName);
         await page.fill('#lastName', testDate.lastName);
         await page.fill('#address', testDate.address);
@@ -32,7 +32,7 @@ test.describe('User Registration Tests', () => {
         await page.waitForTimeout(3000);
     });
 
-    test.only('Register with empty fields', async ({ page }) => {
+    test.skip('Register with empty fields', async ({ page }) => {
         await page.fill('#firstName', testDate.firstName);
         await page.fill('#lastName', testDate.lastName);
         await page.click('#register');
@@ -44,7 +44,7 @@ test.describe('User Registration Tests', () => {
         await page.waitForTimeout(3000);
     });
 
-    test.only('Register with all fields empty', async ({ page }) => {
+    test.skip('Register with all fields empty', async ({ page }) => {
         await page.click('#register');
         const error = await page.locator('#error p').textContent();
         expect(error).toBe('Please fill in all fields.');
