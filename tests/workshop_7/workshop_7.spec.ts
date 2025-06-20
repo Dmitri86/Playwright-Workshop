@@ -11,7 +11,7 @@ test.describe('Variable Declarations and Types', () => {
     let age: number = 30;
     let isStudent: boolean = false;
 
-    test.only('Declaration and Types', async ({ page }) => {
+    test.skip('Declaration and Types', async ({ page }) => {
         await page.goto('file:///C:/Learning/Type%20Script/Playwright%20Shpak/tests/workshop_7/index.html');
         await page.fill(selector.firstName, firstName);
         await page.fill(selector.age, age.toString());
@@ -35,7 +35,7 @@ test.describe('Type Definitions and Interfeces', () => {
         age: 25,
         isStudent: true
     }
-    test.only('Type Def and Inrefaces', async ({ page }) => {
+    test.skip('Type Def and Inrefaces', async ({ page }) => {
         await page.goto('file:///C:/Learning/Type%20Script/Playwright%20Shpak/tests/workshop_7/index.html');
         await page.fill(selector.firstName, user.firstName);
         await page.fill(selector.age, user.age.toString());
