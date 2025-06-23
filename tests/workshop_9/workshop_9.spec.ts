@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test'
 
-test.only('Automation Form Submission @githubAction', async({page}) => {
+test('Automation Form Submission @githubAction', async({page}) => {
     await page.goto('https://demo.playwright.dev/todomvc/');
 
     const newToDo = await page.getByPlaceholder('What needs to be done?');
@@ -18,7 +18,7 @@ test.only('Automation Form Submission @githubAction', async({page}) => {
     await expect(secondTodo).not.toHaveClass('completed');
 });
 
-test.only('Handling Form @githubAction', async({page}) => {
+test('Handling Form @githubAction', async({page}) => {
     await page.goto('https://demo.playwright.dev/todomvc/');
     await page.fill('[placeholder="What needs to be done?"]', 'John Doe');
     await page.locator('[placeholder="What needs to be done?"]').press('Enter');
